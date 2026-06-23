@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Packages — Advon & Torch Inc.</title>
+  <meta name="description" content="Explore Advon & Torch service packages — fixed-price starter bundles, the per-user Lifeline managed-support tiers, and à la carte build projects. Includes an interactive pricing estimator." />
+  <meta property="og:title" content="Advon & Torch — Service Packages" />
+  <meta property="og:description" content="Starter bundles, per-user Lifeline support, and build projects — with a live cost estimator." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg:       #0A0B0D;
+      --surface:  #14161A;
+      --surface2: #101216;
+      --line:     #2A2F37;
+      --line-s:   #1C2026;
+      --text:     #F5F6F8;
+      --muted:    #8B93A1;
+      --ember:    #FF6B35;
+      --amber:    #FFC044;
+      --crimson:  #B11217;
+      --disp:     'Space Grotesk', sans-serif;
+      --body:     'Inter', sans-serif;
+      --mono:     'JetBrains Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .site { max-width: 1040px; margin: 0 auto; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--ember);
+      text-transform: uppercase;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(10,11,13,0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line-s);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-name  { font-family: var(--disp); font-weight: 700; font-size: 16px; letter-spacing: 0.4px; color: var(--text); }
+    .nav-tag   { font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 2px; display: block; margin-top: 2px; }
+    .torch-mark { width: 28px; height: 28px; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 26px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      padding: 8px 18px;
+      border-radius: 7px;
+      font-size: 13px !important;
+      transition: border-color .15s !important;
+    }
+    .nav-cta:hover { border-color: var(--ember) !important; }
+    .nav-toggle { display: none; background: none; border: none; color: var(--muted); font-size: 22px; cursor: pointer; }
+
+    /* ── HERO ── */
+    .phero { padding: 84px 28px 56px; position: relative; overflow: hidden; }
+    .phero-glow {
+      position: absolute;
+      top: -200px; right: -120px;
+      width: 640px; height: 640px;
+      background: radial-gradient(circle at center,
+        rgba(255,107,53,0.18) 0%,
+        rgba(255,107,53,0.06) 38%,
+        transparent 68%);
+      pointer-events: none;
+      filter: blur(12px);
+    }
+    .phero-inner { position: relative; max-width: 760px; }
+    .phero h1 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 1.06;
+      letter-spacing: -1.4px;
+      margin: 20px 0 22px;
+    }
+    .grad {
+      background: linear-gradient(100deg, var(--amber), var(--ember) 55%, var(--crimson));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .phero-sub { color: var(--muted); font-size: 17px; line-height: 1.68; max-width: 600px; }
+    .model-strip { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .model-pill {
+      display: flex; align-items: center; gap: 9px;
+      border: 1px solid var(--line); border-radius: 999px;
+      padding: 9px 16px; font-size: 13px; color: var(--text);
+    }
+    .model-pill i { color: var(--ember); font-size: 16px; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 72px 28px; }
+    .section-head { margin-bottom: 44px; max-width: 660px; }
+    .section-head h2 { font-family: var(--disp); font-weight: 700; font-size: 34px; letter-spacing: -0.8px; margin: 12px 0 14px; }
+    .section-head p  { color: var(--muted); font-size: 16px; }
+    .divider { border: none; border-top: 1px solid var(--line-s); margin: 0 28px; }
+
+    /* ── BUNDLE CARDS ── */
+    .bundles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .bcard {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 16px; padding: 30px 26px; position: relative;
+      display: flex; flex-direction: column; overflow: hidden;
+      transition: border-color .18s, transform .18s;
+    }
+    .bcard:hover { border-color: #3a4150; transform: translateY(-3px); }
+    .bcard.featured { border-color: var(--ember); }
+    .bcard.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute; top: 16px; right: -34px;
+      transform: rotate(45deg);
+      background: var(--ember); color: #1A0A03;
+      font-family: var(--mono); font-size: 9px; font-weight: 500;
+      letter-spacing: 1.5px; padding: 5px 44px;
+    }
+    .bcard-name { font-family: var(--disp); font-weight: 700; font-size: 22px; letter-spacing: 0.5px; }
+    .bcard-tagline { color: var(--muted); font-size: 13.5px; margin-top: 6px; min-height: 38px; }
+    .bcard-price { font-family: var(--disp); font-size: 38px; font-weight: 700; letter-spacing: -1px; margin: 16px 0 2px; }
+    .bcard-price small { font-size: 14px; color: var(--muted); font-weight: 400; letter-spacing: 0; }
+    .bcard-saving { font-family: var(--mono); font-size: 11px; color: var(--amber); letter-spacing: 0.5px; }
+    .bcard-scope { list-style: none; margin: 22px 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
+    .bcard-scope li { display: flex; gap: 10px; font-size: 13.5px; color: var(--text); line-height: 1.5; }
+    .bcard-scope li i { color: var(--ember); font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+    .bcard-trans { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.5px; padding-top: 14px; border-top: 1px solid var(--line-s); margin-bottom: 18px; }
+    .bcard-trans b { color: var(--text); }
+    .bcard-btns { display: flex; gap: 8px; }
+    .btn-primary {
+      background: var(--ember); color: #1A0A03;
+      padding: 11px 18px; border-radius: 7px; text-align: center;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+      border: none; cursor: pointer; display: inline-block; flex: 1;
+      transition: opacity .15s, transform .12s;
+    }
+    .btn-primary:hover { opacity: .9; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      padding: 11px 18px; border-radius: 7px; text-align: center;
+      text-decoration: none; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--line); cursor: pointer; display: inline-block; flex: 1;
+      transition: border-color .15s;
+    }
+    .btn-ghost:hover { border-color: var(--muted); }
+
+    /* ── LIFELINE TIERS ── */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-s); border: 1px solid var(--line-s); border-radius: 16px; overflow: hidden; }
+    .tier { background: var(--bg); padding: 30px 26px; display: flex; flex-direction: column; transition: background .2s; }
+    .tier:hover { background: var(--surface2); }
+    .tier-name { font-family: var(--disp); font-weight: 700; font-size: 19px; letter-spacing: 0.4px; }
+    .tier-rate { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -0.8px; margin: 12px 0 2px; }
+    .tier-rate small { font-size: 13px; color: var(--muted); font-weight: 400; letter-spacing: 0; }
+    .tier-cov { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 9px; }
+    .tier-cov li { display: flex; gap: 9px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .tier-cov li i { color: var(--ember); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+    .tier-cov li.base { color: var(--text); font-weight: 500; }
+
+    /* ── PROJECT MENU ── */
+    .projects { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .prow { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line-s); }
+    .prow:last-child { border-bottom: none; }
+    .prow:hover { background: var(--surface2); }
+    .prow-name { font-size: 15px; }
+    .prow-name span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+    .prow-price { font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -0.4px; white-space: nowrap; }
+
+    /* ── CALCULATOR ── */
+    .calc-wrap { display: grid; grid-template-columns: 1fr 0.9fr; gap: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+    .calc-controls { padding: 36px; background: var(--surface); }
+    .calc-out { padding: 36px; background: var(--surface2); display: flex; flex-direction: column; }
+    .cfield { margin-bottom: 24px; }
+    .cfield > label { display: block; font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+    .seg { display: flex; gap: 6px; flex-wrap: wrap; }
+    .seg button {
+      flex: 1; min-width: 0; background: var(--bg); border: 1px solid var(--line);
+      color: var(--muted); padding: 10px 8px; border-radius: 8px; cursor: pointer;
+      font-family: var(--body); font-size: 13px; font-weight: 500; transition: all .15s;
+    }
+    .seg button:hover { border-color: var(--muted); color: var(--text); }
+    .seg button.active { background: rgba(255,107,53,0.12); border-color: var(--ember); color: var(--ember); }
+    .users-row { display: flex; align-items: center; gap: 16px; }
+    .users-row input[type=range] { flex: 1; accent-color: var(--ember); }
+    .users-num {
+      width: 78px; background: var(--bg); border: 1px solid var(--line); color: var(--text);
+      padding: 10px; border-radius: 8px; font-family: var(--disp); font-size: 18px; font-weight: 700; text-align: center;
+    }
+    .users-num:focus, .seg button:focus-visible { outline: none; border-color: var(--ember); }
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+    .toggle-row .tl { font-size: 14px; }
+    .toggle-row .tl span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .switch { position: relative; width: 46px; height: 26px; flex-shrink: 0; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; background: var(--line); border-radius: 999px; cursor: pointer; transition: .2s; }
+    .slider::before { content: ''; position: absolute; height: 20px; width: 20px; left: 3px; top: 3px; background: var(--text); border-radius: 50%; transition: .2s; }
+    .switch input:checked + .slider { background: var(--ember); }
+    .switch input:checked + .slider::before { transform: translateX(20px); background: #1A0A03; }
+
+    .out-label { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+    .out-big { font-family: var(--disp); font-size: 44px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; margin: 8px 0 4px; }
+    .out-big .grad { display: inline; }
+    .out-sub { font-size: 13px; color: var(--muted); }
+    .out-lines { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; }
+    .out-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .out-line .k { font-size: 13.5px; color: var(--muted); }
+    .out-line .k small { display: block; font-size: 11px; color: #5d6470; }
+    .out-line .v { font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -0.3px; }
+    .out-note { font-size: 11.5px; color: #5d6470; margin-top: auto; padding-top: 22px; line-height: 1.5; }
+    .out-cta { margin-top: 22px; }
+
+    /* ── TERMS ── */
+    .terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--line-s); border: 1px solid var(--line-s); border-radius: 14px; overflow: hidden; }
+    .term { background: var(--bg); padding: 26px 24px; }
+    .term i { color: var(--ember); font-size: 20px; }
+    .term h4 { font-family: var(--disp); font-weight: 500; font-size: 15px; margin: 12px 0 7px; }
+    .term p { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
+
+    /* ── DETAIL MODAL ── */
+    .modal-bg {
+      position: fixed; inset: 0; background: rgba(5,6,8,0.78);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      z-index: 200; display: none; align-items: flex-start; justify-content: center;
+      padding: 60px 20px; overflow-y: auto;
+    }
+    .modal-bg.open { display: flex; }
+    .modal {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+      max-width: 720px; width: 100%; position: relative; overflow: hidden;
+      animation: pop .22s ease;
+    }
+    @keyframes pop { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .modal::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--amber), var(--ember) 50%, var(--crimson)); }
+    .modal-close { position: absolute; top: 18px; right: 18px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); width: 36px; height: 36px; border-radius: 9px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all .15s; }
+    .modal-close:hover { color: var(--text); border-color: var(--muted); }
+    .modal-body { padding: 40px; }
+    .modal-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--ember); letter-spacing: 1.5px; text-transform: uppercase; }
+    .modal h3 { font-family: var(--disp); font-weight: 700; font-size: 30px; letter-spacing: -0.6px; margin: 10px 0 6px; }
+    .modal-price { font-family: var(--disp); font-size: 22px; font-weight: 700; color: var(--ember); margin-bottom: 18px; }
+    .modal-desc { color: var(--muted); font-size: 14.5px; line-height: 1.7; margin-bottom: 26px; }
+    .modal-sub { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin: 26px 0 14px; }
+    .vtable { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    .vrow { display: flex; justify-content: space-between; gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--line-s); font-size: 14px; }
+    .vrow:last-child { border-bottom: none; }
+    .vrow .vk { color: var(--text); }
+    .vrow .vv { color: var(--muted); font-family: var(--disp); font-weight: 500; white-space: nowrap; }
+    .vrow.total { background: var(--surface2); }
+    .vrow.total .vk { font-weight: 600; }
+    .vrow.total .vv { color: var(--text); font-weight: 700; }
+    .vrow.save .vv { color: var(--amber); }
+    .modal-example { background: var(--surface2); border: 1px solid var(--line-s); border-radius: 10px; padding: 18px 20px; font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+    .modal-example b { color: var(--text); }
+    .modal-cta { display: flex; gap: 10px; margin-top: 28px; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 28px; border-top: 1px solid var(--line-s);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-family: var(--disp); font-weight: 700; font-size: 15px; letter-spacing: 0.4px; }
+    .footer-meta  { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .footer-badges { display: flex; gap: 8px; }
+    .fbadge {
+      font-family: var(--mono); font-size: 9px; font-weight: 500;
+      letter-spacing: 1.5px; padding: 6px 12px; border-radius: 6px;
+      color: var(--muted); border: 1px solid var(--line); text-transform: uppercase;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 860px) {
+      .bundles { grid-template-columns: 1fr; }
+      .tiers { grid-template-columns: 1fr; }
+      .calc-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .phero h1 { font-size: 34px; letter-spacing: -1px; }
+      .phero-sub { font-size: 15px; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 28px; gap: 16px; }
+      .nav-toggle { display: block; }
+      .section { padding: 56px 20px; }
+      .modal-body { padding: 28px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <svg class="torch-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2 L20 21 L4 21 Z" stroke="#FF6B35" stroke-width="1.2" fill="none"/>
+      <path d="M12 7 C13.5 9 13.8 11 12.5 13 C14 12.5 14.5 10.5 14 9 C15.2 10.8 15 13.5 13 15 C11 16.5 9 15 9.2 12.5 C9.3 11 10.5 9.5 12 7 Z" fill="#FF6B35"/>
+    </svg>
+    <div>
+      <div class="nav-name">ADVON & TORCH</div>
+      <span class="nav-tag">SDVOSB · VETERAN OWNED</span>
+    </div>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <i class="ti ti-menu-2"></i>
+  </button>
+  <div class="nav-links">
+    <a href="index.html#caps">Capabilities</a>
+    <a href="#bundles">Bundles</a>
+    <a href="#lifeline">Lifeline</a>
+    <a href="#estimator">Estimator</a>
+    <a href="index.html#contact" class="nav-cta">Request a quote</a>
+  </div>
+</nav>
+
+<div class="site">
+
+  <!-- HERO -->
+  <section class="phero">
+    <div class="phero-glow"></div>
+    <div class="phero-inner">
+      <div class="eyebrow">Service Packages</div>
+      <h1>Pricing built to <span class="grad">start simple</span> and scale with you.</h1>
+      <p class="phero-sub">A three-part model for small-business teams of roughly 3–75 users: a fixed-price starter bundle to get launched, the per-user Lifeline for ongoing managed support, and à la carte build projects whenever you need them.</p>
+      <div class="model-strip">
+        <div class="model-pill"><i class="ti ti-rocket"></i> Fixed-price starter bundles</div>
+        <div class="model-pill"><i class="ti ti-refresh"></i> Per-user Lifeline support</div>
+        <div class="model-pill"><i class="ti ti-tools"></i> À la carte build projects</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- BUNDLES -->
+  <section class="section" id="bundles">
+    <div class="section-head">
+      <div class="eyebrow">Step 1 · Starter Bundles</div>
+      <h2>Get launched with one fixed price.</h2>
+      <p>Fixed price, fixed scope — the entry point for a new client. Each bundle bundles onboarding, an initial build, and a hypercare window at roughly 20–25% below à la carte, then transitions to its matching Lifeline tier.</p>
+    </div>
+    <div class="bundles" id="bundleGrid"></div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- LIFELINE -->
+  <section class="section" id="lifeline">
+    <div class="section-head">
+      <div class="eyebrow">Step 2 · The Lifeline</div>
+      <h2>Ongoing support, billed per user.</h2>
+      <p>Recurring managed support, billed per user per month on a 12-month minimum term. It scales automatically as your headcount changes — new seats are added at the tier rate, never re-quoted.</p>
+    </div>
+    <div class="tiers" id="tierGrid"></div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ESTIMATOR -->
+  <section class="section" id="estimator">
+    <div class="section-head">
+      <div class="eyebrow">Interactive Estimator</div>
+      <h2>Model your first year.</h2>
+      <p>Pick a starter bundle, a support tier, and your team size to see an indicative first-year investment. Figures are estimates for planning — your formal proposal is scoped to your environment.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-controls">
+        <div class="cfield">
+          <label>Starter bundle</label>
+          <div class="seg" id="calcBundle"></div>
+        </div>
+        <div class="cfield">
+          <label>Lifeline tier</label>
+          <div class="seg" id="calcTier"></div>
+        </div>
+        <div class="cfield">
+          <label>Team size <span id="usersEcho" style="color:var(--ember)"></span></label>
+          <div class="users-row">
+            <input type="range" id="usersRange" min="1" max="75" value="12" aria-label="Number of users" />
+            <input type="number" id="usersNum" class="users-num" min="1" max="75" value="12" aria-label="Number of users" />
+          </div>
+        </div>
+        <div class="cfield" style="margin-bottom:0">
+          <label>Billing</label>
+          <div class="toggle-row">
+            <div class="tl">Annual prepayment <span>Reduces the Lifeline rate by 10%</span></div>
+            <label class="switch"><input type="checkbox" id="prepay" /><span class="slider"></span></label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="out-label">Estimated Year 1 investment</div>
+        <div class="out-big"><span class="grad" id="outYear1">$0</span></div>
+        <div class="out-sub" id="outYear1Sub">—</div>
+        <div class="out-lines">
+          <div class="out-line">
+            <div class="k">Starter bundle <small id="outBundleName">—</small></div>
+            <div class="v" id="outBundle">$0</div>
+          </div>
+          <div class="out-line">
+            <div class="k">Lifeline (monthly) <small id="outTierName">—</small></div>
+            <div class="v" id="outMonthly">$0</div>
+          </div>
+          <div class="out-line">
+            <div class="k">Lifeline (annual)</div>
+            <div class="v" id="outAnnual">$0</div>
+          </div>
+        </div>
+        <div class="out-cta">
+          <a href="index.html#contact" class="btn-primary" style="display:block">Request a formal quote</a>
+        </div>
+        <p class="out-note" id="outNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROJECT MENU -->
+  <section class="section" id="projects">
+    <div class="section-head">
+      <div class="eyebrow">Project Menu</div>
+      <h2>Build projects, à la carte.</h2>
+      <p>Fixed-fee builds available at any time. Charged at full rate à la carte — discounted only when included within a starter bundle.</p>
+    </div>
+    <div class="projects" id="projectList"></div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TERMS -->
+  <section class="section" id="terms">
+    <div class="section-head">
+      <div class="eyebrow">Commercial Terms</div>
+      <h2>How the model works.</h2>
+    </div>
+    <div class="terms">
+      <div class="term"><i class="ti ti-calendar-stats"></i><h4>12-month minimum</h4><p>The Lifeline carries a 12-month minimum term, billed monthly.</p></div>
+      <div class="term"><i class="ti ti-discount-2"></i><h4>Prepay & save 10%</h4><p>Annual prepayment reduces the Lifeline per-user rate by 10%.</p></div>
+      <div class="term"><i class="ti ti-users-plus"></i><h4>Grow without re-quotes</h4><p>New users are added at the prevailing tier rate — no re-quote on growth.</p></div>
+      <div class="term"><i class="ti ti-package"></i><h4>Bundle savings</h4><p>Bundles are priced roughly 20–25% below the equivalent scope bought à la carte.</p></div>
+      <div class="term"><i class="ti ti-receipt"></i><h4>Full-rate projects</h4><p>Project work performed outside a bundle is billed at full rate.</p></div>
+      <div class="term"><i class="ti ti-building"></i><h4>Enterprise scoped</h4><p>Teams over ~75 users and bespoke statements of work are scoped individually.</p></div>
+    </div>
+  </section>
+
+</div><!-- /site -->
+
+<!-- DETAIL MODAL -->
+<div class="modal-bg" id="modalBg" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">ADVON & TORCH INC</div>
+    <div class="footer-meta">© 2026 · Lighting the path for secure and efficient operations.</div>
+  </div>
+  <div class="footer-badges">
+    <span class="fbadge">SDVOSB</span>
+    <span class="fbadge">Veteran Owned</span>
+  </div>
+</footer>
+
+<script>
+/* ───────────────────────────────────────────────
+   DATA MODEL — single source of truth for pricing
+   Source: A&T-SOP-PKG-001 (Service Package Catalog)
+   ─────────────────────────────────────────────── */
+const TIERS = {
+  secure: {
+    id: 'secure', name: 'Secure', rate: 125,
+    base: 'Baseline managed IT',
+    coverage: ['Managed IT & endpoint security', 'RMM / patching & monitoring', 'Business-hours helpdesk', 'Backups']
+  },
+  'secure+': {
+    id: 'secure+', name: 'Secure+', rate: 200,
+    base: 'Everything in Secure, plus',
+    coverage: ['Compliance posture (HIPAA / CMMC-lite)', 'Faster SLA & Zero Trust', 'One standing automation', 'Monthly reporting']
+  },
+  'managed-ai': {
+    id: 'managed-ai', name: 'Managed AI', rate: 300,
+    base: 'Everything in Secure+, plus',
+    coverage: ['AI-agent drift monitoring', 'Pooled block of engineering hours', 'Quarterly vCIO strategy session']
+  }
+};
+
+const BUNDLES = [
+  {
+    id: 'ignite', name: 'IGNITE', price: 3500, featured: false,
+    tagline: 'Launch a small team securely with a professional web presence.',
+    scope: ['Onboarding for up to 10 users', 'Security baseline — MFA & hardening', '5-page professional website', '30-day hypercare'],
+    transitionsTo: 'secure', hypercare: '30-day',
+    alacarte: 4500, saving: 1000, savingPct: 22,
+    components: [
+      ['Onboarding (up to 10 users)', '$2,000'],
+      ['Website — 5-page template', '$2,500'],
+      ['Security baseline + 30-day hypercare', 'Included']
+    ],
+    example: 'Ideal for a brand-new small team that needs to be secure and online quickly, then move onto predictable Secure support.'
+  },
+  {
+    id: 'build', name: 'BUILD', price: 9500, featured: true,
+    tagline: 'A growth-stage setup with a custom site and your first automation.',
+    scope: ['Full onboarding & managed setup', 'Custom CRM-connected website', 'One automated workflow', '30-day hypercare'],
+    transitionsTo: 'secure+', hypercare: '30-day',
+    alacarte: 12500, saving: 3000, savingPct: 24,
+    components: [
+      ['Onboarding & managed setup', '$2,500'],
+      ['Website — custom (CRM-connected)', '$5,000'],
+      ['One automated workflow', '$5,000'],
+      ['30-day hypercare', 'Included']
+    ],
+    example: 'Our default recommendation for new prospects: a 12-user team entering on BUILD ($9,500) and running Secure+ at $200/user invests roughly $43K in year one.'
+  },
+  {
+    id: 'transform', name: 'TRANSFORM', price: 24000, featured: false,
+    tagline: 'Advanced setup with a web app or AI builds and a compliance-ready posture.',
+    scope: ['Advanced onboarding & setup', 'Web application or two AI / agentic builds', 'Compliance-ready posture', '60-day hypercare'],
+    transitionsTo: 'managed-ai', hypercare: '60-day',
+    alacarte: 31000, saving: 7000, savingPct: 22,
+    components: [
+      ['Advanced onboarding & setup', '$7,000'],
+      ['Web application / portal (or two AI builds)', '$15,000'],
+      ['Compliance-ready posture setup', '$7,000'],
+      ['60-day hypercare', 'Included']
+    ],
+    example: 'For a 30-user compliance-sensitive client: entering on TRANSFORM ($24,000) with Managed AI at $300/user is roughly $152K in year one, with ongoing support scaling per seat.'
+  }
+];
+
+const PROJECTS = [
+  ['Website — template', 'Configured marketing site', '$2,500'],
+  ['Website — custom', 'Bespoke, CRM-connected', '$5,000'],
+  ['Website — web application / portal', 'Interactive app or client portal', '$15,000+'],
+  ['AI / agentic automation', 'Per build', '$5,000 – $12,000'],
+  ['Custom software module', 'Tailored integration or tooling', '$15,000+'],
+  ['Compliance documentation package', 'CMMC / NIST control set', 'Flat fee, scoped']
+];
+
+const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+
+/* ── RENDER: bundle cards ── */
+const bundleGrid = document.getElementById('bundleGrid');
+bundleGrid.innerHTML = BUNDLES.map(b => `
+  <div class="bcard ${b.featured ? 'featured' : ''}">
+    <div class="bcard-name">${b.name}</div>
+    <div class="bcard-tagline">${b.tagline}</div>
+    <div class="bcard-price">${fmt(b.price)} <small>one-time</small></div>
+    <div class="bcard-saving">Save ~${fmt(b.saving)} (${b.savingPct}%) vs à la carte</div>
+    <ul class="bcard-scope">
+      ${b.scope.map(s => `<li><i class="ti ti-check"></i>${s}</li>`).join('')}
+    </ul>
+    <div class="bcard-trans">Transitions to <b>${TIERS[b.transitionsTo].name}</b> · ${TIERS[b.transitionsTo].rate}/user/mo</div>
+    <div class="bcard-btns">
+      <button class="btn-ghost" data-bundle="${b.id}">Explore</button>
+      <a class="btn-primary" href="#estimator" data-pick="${b.id}">Estimate</a>
+    </div>
+  </div>
+`).join('');
+
+/* ── RENDER: lifeline tiers ── */
+const tierGrid = document.getElementById('tierGrid');
+tierGrid.innerHTML = Object.values(TIERS).map(t => `
+  <div class="tier">
+    <div class="tier-name">${t.name}</div>
+    <div class="tier-rate">${fmt(t.rate)} <small>/ user / mo</small></div>
+    <ul class="tier-cov">
+      <li class="base"><i class="ti ti-point-filled"></i>${t.base}</li>
+      ${t.coverage.map(c => `<li><i class="ti ti-check"></i>${c}</li>`).join('')}
+    </ul>
+  </div>
+`).join('');
+
+/* ── RENDER: project menu ── */
+document.getElementById('projectList').innerHTML = PROJECTS.map(p => `
+  <div class="prow">
+    <div class="prow-name">${p[0]}<span>${p[1]}</span></div>
+    <div class="prow-price">${p[2]}</div>
+  </div>
+`).join('');
+
+/* ── DETAIL MODAL ── */
+const modalBg = document.getElementById('modalBg');
+const modalBody = document.getElementById('modalBody');
+
+function openBundle(id) {
+  const b = BUNDLES.find(x => x.id === id);
+  if (!b) return;
+  const tier = TIERS[b.transitionsTo];
+  modalBody.innerHTML = `
+    <div class="modal-eyebrow">Starter Bundle · transitions to ${tier.name}</div>
+    <h3 id="modalTitle">${b.name}</h3>
+    <div class="modal-price">${fmt(b.price)} <span style="color:var(--muted);font-size:14px;font-weight:400">one-time, fixed scope</span></div>
+    <p class="modal-desc">${b.tagline} ${b.example}</p>
+
+    <div class="modal-sub">What's included</div>
+    <div class="vtable">
+      ${b.scope.map(s => `<div class="vrow"><span class="vk">${s}</span><span class="vv"><i class="ti ti-check" style="color:var(--ember)"></i></span></div>`).join('')}
+    </div>
+
+    <div class="modal-sub">Value vs à la carte</div>
+    <div class="vtable">
+      ${b.components.map(c => `<div class="vrow"><span class="vk">${c[0]}</span><span class="vv">${c[1]}</span></div>`).join('')}
+      <div class="vrow"><span class="vk">À la carte value</span><span class="vv">≈ ${fmt(b.alacarte)}</span></div>
+      <div class="vrow total"><span class="vk">Bundle price</span><span class="vv">${fmt(b.price)}</span></div>
+      <div class="vrow save"><span class="vk">Your saving</span><span class="vv">≈ ${fmt(b.saving)} (${b.savingPct}%)</span></div>
+    </div>
+
+    <div class="modal-sub">Then: the ${tier.name} Lifeline</div>
+    <div class="modal-example">
+      On completion of the build and ${b.hypercare} hypercare, ${b.name} transitions to <b>${tier.name}</b> at <b>${fmt(tier.rate)}/user/month</b> — ${tier.base.toLowerCase()} ${tier.coverage.slice(0,2).join(', ').toLowerCase()}, and more. Support scales per seat as your team grows.
+    </div>
+
+    <div class="modal-cta">
+      <a href="#estimator" class="btn-primary" data-pick="${b.id}" onclick="closeModal()">Estimate this bundle</a>
+      <a href="index.html#contact" class="btn-ghost">Request a quote</a>
+    </div>
+  `;
+  modalBg.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  modalBg.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modalBg.addEventListener('click', e => { if (e.target === modalBg) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-bundle]');
+  if (t) openBundle(t.dataset.bundle);
+});
+
+/* ───────────────────────────────────────────────
+   ESTIMATOR
+   ─────────────────────────────────────────────── */
+const state = { bundle: 'build', tier: 'secure+', users: 12, prepay: false };
+
+const calcBundle = document.getElementById('calcBundle');
+calcBundle.innerHTML =
+  `<button data-b="none">None</button>` +
+  BUNDLES.map(b => `<button data-b="${b.id}">${b.name}</button>`).join('');
+
+const calcTier = document.getElementById('calcTier');
+calcTier.innerHTML = Object.values(TIERS)
+  .map(t => `<button data-t="${t.id}">${t.name}</button>`).join('');
+
+const usersRange = document.getElementById('usersRange');
+const usersNum = document.getElementById('usersNum');
+const prepay = document.getElementById('prepay');
+
+function syncSeg(container, attr, value) {
+  container.querySelectorAll('button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset[attr] === value);
+  });
+}
+
+function clampUsers(n) {
+  n = parseInt(n, 10);
+  if (isNaN(n)) n = 1;
+  return Math.min(75, Math.max(1, n));
+}
+
+function render() {
+  const b = BUNDLES.find(x => x.id === state.bundle);
+  const tier = TIERS[state.tier];
+  const bundlePrice = b ? b.price : 0;
+  const rate = tier.rate * (state.prepay ? 0.9 : 1);
+  const monthly = rate * state.users;
+  const annual = monthly * 12;
+  const year1 = bundlePrice + annual;
+
+  syncSeg(calcBundle, 'b', state.bundle);
+  syncSeg(calcTier, 't', state.tier);
+
+  document.getElementById('usersEcho').textContent = `· ${state.users} user${state.users === 1 ? '' : 's'}`;
+  document.getElementById('outYear1').textContent = fmt(year1);
+  document.getElementById('outYear1Sub').textContent =
+    `${b ? b.name + ' bundle' : 'No bundle'} + ${tier.name} for ${state.users} user${state.users === 1 ? '' : 's'}`;
+
+  document.getElementById('outBundle').textContent = bundlePrice ? fmt(bundlePrice) : '—';
+  document.getElementById('outBundleName').textContent = b ? b.name : 'not selected';
+  document.getElementById('outMonthly').textContent = fmt(monthly);
+  document.getElementById('outTierName').textContent =
+    `${tier.name} · ${fmt(rate)}/user${state.prepay ? ' (prepaid)' : ''}`;
+  document.getElementById('outAnnual').textContent = fmt(annual);
+
+  document.getElementById('outNote').textContent =
+    `${state.prepay ? '10% annual-prepay discount applied. ' : ''}Lifeline carries a 12-month minimum; new seats are added at the ${tier.name} rate without re-quote. Estimate only — excludes any à la carte build projects.`;
+}
+
+calcBundle.addEventListener('click', e => {
+  const btn = e.target.closest('button'); if (!btn) return;
+  state.bundle = btn.dataset.b === 'none' ? null : btn.dataset.b;
+  // suggest the matching tier when a bundle is chosen
+  const b = BUNDLES.find(x => x.id === state.bundle);
+  if (b) state.tier = b.transitionsTo;
+  render();
+});
+calcTier.addEventListener('click', e => {
+  const btn = e.target.closest('button'); if (!btn) return;
+  state.tier = btn.dataset.t;
+  render();
+});
+usersRange.addEventListener('input', () => {
+  state.users = clampUsers(usersRange.value);
+  usersNum.value = state.users;
+  render();
+});
+usersNum.addEventListener('input', () => {
+  state.users = clampUsers(usersNum.value);
+  usersRange.value = state.users;
+  render();
+});
+prepay.addEventListener('change', () => { state.prepay = prepay.checked; render(); });
+
+// "Estimate" buttons pre-select a bundle and scroll to the estimator
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-pick]');
+  if (!t) return;
+  const id = t.dataset.pick;
+  const b = BUNDLES.find(x => x.id === id);
+  if (b) { state.bundle = b.id; state.tier = b.transitionsTo; render(); }
+});
+
+// normalise initial control state, then render
+state.bundle = state.bundle || 'build';
+render();
+</script>
+
+</body>
+</html>
