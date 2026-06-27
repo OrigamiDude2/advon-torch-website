@@ -323,18 +323,18 @@
     </svg>
     <div>
       <div class="nav-name">ADVON & TORCH</div>
-      <span class="nav-tag">SDVOSB · VETERAN OWNED</span>
+      <span class="nav-tag">NATIONAL GUARD · 100+ YRS SERVICE</span>
     </div>
   </a>
   <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <i class="ti ti-menu-2"></i>
   </button>
   <div class="nav-links">
-    <a href="index.html#caps">Capabilities</a>
+    <a href="index.html#areas">What we solve</a>
     <a href="#bundles">Bundles</a>
     <a href="#lifeline">Lifeline</a>
     <a href="#estimator">Estimator</a>
-    <a href="index.html#contact" class="nav-cta">Request a quote</a>
+    <a href="index.html#intake" class="nav-cta">Request a quote</a>
   </div>
 </nav>
 
@@ -432,7 +432,7 @@
           </div>
         </div>
         <div class="out-cta">
-          <a href="index.html#contact" class="btn-primary" style="display:block">Request a formal quote</a>
+          <a href="index.html#intake" class="btn-primary" style="display:block">Request a formal quote</a>
         </div>
         <p class="out-note" id="outNote"></p>
       </div>
@@ -485,8 +485,7 @@
     <div class="footer-meta">© 2026 · Lighting the path for secure and efficient operations.</div>
   </div>
   <div class="footer-badges">
-    <span class="fbadge">SDVOSB</span>
-    <span class="fbadge">Veteran Owned</span>
+    <span class="fbadge">National Guard</span>
   </div>
 </footer>
 
@@ -582,7 +581,7 @@ bundleGrid.innerHTML = BUNDLES.map(b => `
     <div class="bcard-trans">Transitions to <b>${TIERS[b.transitionsTo].name}</b> · ${TIERS[b.transitionsTo].rate}/user/mo</div>
     <div class="bcard-btns">
       <button class="btn-ghost" data-bundle="${b.id}">Explore</button>
-      <a class="btn-primary" href="#estimator" data-pick="${b.id}">Estimate</a>
+      <button class="btn-primary" data-pick="${b.id}">Estimate</button>
     </div>
   </div>
 `).join('');
@@ -642,7 +641,7 @@ function openBundle(id) {
 
     <div class="modal-cta">
       <a href="#estimator" class="btn-primary" data-pick="${b.id}" onclick="closeModal()">Estimate this bundle</a>
-      <a href="index.html#contact" class="btn-ghost">Request a quote</a>
+      <a href="index.html#intake" class="btn-ghost">Request a quote</a>
     </div>
   `;
   modalBg.classList.add('open');
