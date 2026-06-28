@@ -235,11 +235,11 @@
     .out-cta { margin-top: 22px; }
 
     /* ── TERMS ── */
-    .terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--line-s); border: 1px solid var(--line-s); border-radius: 14px; overflow: hidden; }
-    .term { background: var(--bg); padding: 26px 24px; }
+    .terms { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line-s); border: 1px solid var(--line-s); border-radius: 14px; overflow: hidden; }
+    .term { background: var(--bg); padding: 22px 16px; }
     .term i { color: var(--ember); font-size: 20px; }
-    .term h4 { font-family: var(--disp); font-weight: 500; font-size: 15px; margin: 12px 0 7px; }
-    .term p { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
+    .term h4 { font-family: var(--disp); font-weight: 500; font-size: 14px; margin: 10px 0 6px; }
+    .term p { color: var(--muted); font-size: 12.5px; line-height: 1.55; }
 
     /* ── DETAIL MODAL ── */
     .modal-bg {
@@ -297,6 +297,10 @@
       .bundles { grid-template-columns: 1fr; }
       .tiers { grid-template-columns: 1fr; }
       .calc-wrap { grid-template-columns: 1fr; }
+      .terms { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .terms { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 720px) {
       .phero h1 { font-size: 34px; letter-spacing: -1px; }
