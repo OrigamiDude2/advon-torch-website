@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advon & Torch Inc. — Precision IT for Federal & Healthcare Programs</title>
-  <meta name="description" content="Advon & Torch is a Service-Disabled Veteran-Owned Small Business delivering HIPAA-compliant cloud infrastructure, cybersecurity, and federal program management." />
+  <title>Advon & Torch Inc. — National Guard-Led Consulting · Government · Finance · IT · Cyber</title>
+  <meta name="description" content="Advon & Torch is a National Guard-led consulting firm for growing businesses and federal programs — government, financial operations, IT, and cybersecurity." />
   <meta property="og:title" content="Advon & Torch Inc." />
-  <meta property="og:description" content="Precision IT. Secure by Design. SDVOSB delivering HIPAA-compliant cloud and cyber for federal and healthcare clients." />
+  <meta property="og:description" content="Bring us the problem you can't crack on your own. National Guard-led consulting for government, financial ops, IT, and cybersecurity." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +38,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+    a { color: inherit; }
     .site { max-width: 1040px; margin: 0 auto; }
     .eyebrow {
       font-family: var(--mono);
@@ -80,7 +81,7 @@
     .nav-toggle { display: none; background: none; border: none; color: var(--muted); font-size: 22px; cursor: pointer; }
 
     /* ── HERO ── */
-    .hero { padding: 100px 28px 80px; position: relative; overflow: hidden; }
+    .hero { padding: 104px 28px 80px; position: relative; overflow: hidden; }
     .hero-glow {
       position: absolute;
       top: -180px; right: -100px;
@@ -92,13 +93,13 @@
       pointer-events: none;
       filter: blur(12px);
     }
-    .hero-inner { position: relative; max-width: 780px; }
+    .hero-inner { position: relative; max-width: 800px; }
     .hero h1 {
       font-family: var(--disp);
       font-weight: 700;
-      font-size: 60px;
-      line-height: 1.04;
-      letter-spacing: -1.5px;
+      font-size: 62px;
+      line-height: 1.03;
+      letter-spacing: -1.6px;
       margin: 22px 0 26px;
     }
     .grad {
@@ -107,11 +108,11 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .hero-sub { color: var(--muted); font-size: 18px; line-height: 1.68; max-width: 560px; margin-bottom: 38px; }
+    .hero-sub { color: var(--muted); font-size: 18px; line-height: 1.68; max-width: 580px; margin-bottom: 38px; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary {
       background: var(--ember); color: #1A0A03;
-      padding: 13px 28px; border-radius: 7px;
+      padding: 14px 30px; border-radius: 7px;
       text-decoration: none; font-size: 14px; font-weight: 600;
       border: none; cursor: pointer; display: inline-block;
       transition: opacity .15s, transform .12s;
@@ -119,65 +120,49 @@
     .btn-primary:hover { opacity: .9; transform: translateY(-1px); }
     .btn-ghost {
       background: transparent; color: var(--text);
-      padding: 13px 28px; border-radius: 7px;
+      padding: 14px 30px; border-radius: 7px;
       text-decoration: none; font-size: 14px; font-weight: 500;
       border: 1px solid var(--line); cursor: pointer; display: inline-block;
       transition: border-color .15s;
     }
     .btn-ghost:hover { border-color: var(--muted); }
-    .stat-strip { display: flex; flex-wrap: wrap; margin-top: 68px; border-top: 1px solid var(--line-s); }
-    .stat { padding: 22px 40px 22px 0; margin-right: 40px; border-right: 1px solid var(--line-s); }
-    .stat:last-child { border-right: none; margin-right: 0; }
-    .stat-val { font-family: var(--disp); font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
-    .stat-lbl { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+    /* hero pills */
+    .pill-strip { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 54px; }
+    .pill {
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      letter-spacing: 1px; border: 1px solid var(--line);
+      padding: 8px 14px; border-radius: 999px;
+    }
 
     /* ── SECTIONS ── */
     .section { padding: 88px 28px; }
-    .section-head { margin-bottom: 52px; max-width: 640px; }
-    .section-head h2 { font-family: var(--disp); font-weight: 700; font-size: 36px; letter-spacing: -0.8px; margin: 12px 0 14px; }
+    .section-head { margin-bottom: 48px; max-width: 680px; }
+    .section-head h2 { font-family: var(--disp); font-weight: 700; font-size: 38px; letter-spacing: -0.9px; margin: 12px 0 14px; }
     .section-head p  { color: var(--muted); font-size: 16px; }
     .divider { border: none; border-top: 1px solid var(--line-s); margin: 0 28px; }
 
-    /* ── CAPS GRID ── */
-    .caps {
+    /* ── DISCIPLINE GRID ── */
+    .disc-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       background: var(--line-s);
       border: 1px solid var(--line-s);
-      border-radius: 14px;
+      border-radius: 16px;
       overflow: hidden;
     }
-    .cap { background: var(--bg); padding: 32px 28px; transition: background .2s; }
-    .cap:hover { background: var(--surface2); }
-    .cap-icon { font-size: 24px; color: var(--ember); margin-bottom: 18px; }
-    .cap h3 { font-family: var(--disp); font-weight: 500; font-size: 18px; margin-bottom: 10px; letter-spacing: -0.2px; }
-    .cap p   { color: var(--muted); font-size: 14px; line-height: 1.62; }
-
-    /* ── CASE STUDY ── */
-    .case {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-    }
-    .case::before {
-      content: '';
-      position: absolute; top: 0; left: 0; width: 100%; height: 2px;
-      background: linear-gradient(90deg, var(--amber), var(--ember) 50%, var(--crimson));
-    }
-    .case .tag { font-family: var(--mono); font-size: 11px; color: var(--ember); letter-spacing: 1.5px; text-transform: uppercase; }
-    .case h3 {
-      font-family: var(--disp); font-weight: 700; font-size: 28px;
-      letter-spacing: -0.5px; margin: 18px 0 16px; max-width: 620px; line-height: 1.2;
-    }
-    .case p { color: var(--muted); font-size: 15px; line-height: 1.72; max-width: 700px; margin-bottom: 36px; }
-    .case-metrics { display: flex; gap: 52px; flex-wrap: wrap; }
-    .cm-val { font-family: var(--disp); font-size: 32px; font-weight: 700; letter-spacing: -1px; }
-    .cm-val.e { color: var(--ember); }
-    .cm-lbl { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px; }
+    .disc { background: var(--bg); padding: 36px 32px; transition: background .2s; }
+    .disc:hover { background: var(--surface2); }
+    .disc-icon { font-size: 24px; color: var(--ember); margin-bottom: 18px; }
+    .disc h3 { font-family: var(--disp); font-weight: 500; font-size: 20px; margin: 0 0 8px; letter-spacing: -0.2px; }
+    .disc > p { color: var(--muted); font-size: 14px; line-height: 1.62; margin: 0 0 20px; }
+    .disc-quotes { display: flex; flex-direction: column; gap: 11px; }
+    .disc-q { display: flex; gap: 10px; font-size: 13.5px; color: #C7CCD4; line-height: 1.5; }
+    .disc-q-mark { color: var(--ember); flex-shrink: 0; font-weight: 700; }
+    .disc-note { color: var(--muted); font-size: 15px; margin-top: 26px; }
+    .disc-note a { color: var(--ember); text-decoration: none; font-weight: 500; }
+    .disc-note a:hover { text-decoration: underline; }
 
     /* ── PROCESS STEPS ── */
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; }
@@ -206,29 +191,83 @@
     .partner-chips { display: flex; gap: 8px; flex-wrap: wrap; }
     .chip { font-size: 13px; color: var(--text); border: 1px solid var(--line); padding: 7px 14px; border-radius: 7px; }
 
-    /* ── CONTACT ── */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-    .ci-lead { color: var(--muted); font-size: 16px; line-height: 1.72; margin-bottom: 36px; }
-    .ci-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+    /* ── PACKAGES TEASER ── */
+    .pkg-mini {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--line-s);
+      border: 1px solid var(--line-s);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .pkg-mini-cell { background: var(--bg); padding: 32px 28px; }
+    .pkg-mini-cell:hover { background: var(--surface2); }
+    .pkg-mini-cell .cap-icon { font-size: 24px; color: var(--ember); margin-bottom: 18px; }
+    .pkg-mini-cell h3 { font-family: var(--disp); font-weight: 500; font-size: 18px; margin: 0 0 4px; }
+    .pkg-mini-cell p { color: var(--muted); font-size: 14px; line-height: 1.62; }
+
+    /* ── INTAKE / CONTACT ── */
+    .intake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .intake-glow {
+      position: absolute; bottom: -220px; left: -120px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle at center,
+        rgba(255,107,53,0.14) 0%, rgba(255,107,53,0.05) 40%, transparent 70%);
+      pointer-events: none; filter: blur(12px);
+    }
+    .ci-lead { color: var(--muted); font-size: 16px; line-height: 1.72; margin-bottom: 36px; max-width: 440px; }
+    .ci-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px; }
     .ci-item i { color: var(--ember); font-size: 19px; margin-top: 2px; }
     .ci-label { font-family: var(--mono); font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
     .ci-val   { font-size: 15px; margin-top: 3px; }
+    .ci-val a { color: var(--text); text-decoration: none; }
+    .ci-val a:hover { color: var(--ember); }
+
+    /* intake form card */
+    .intake-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+    .intake-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--amber), var(--ember) 50%, var(--crimson));
+    }
+
+    /* area chips */
+    .chips-label { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 11px; letter-spacing: 1px; text-transform: uppercase; }
+    .chips-label span { text-transform: none; letter-spacing: 0; }
+    .chips-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+    .area-chip {
+      background: var(--bg); border: 1px solid var(--line); color: var(--muted);
+      padding: 8px 14px; border-radius: 999px; cursor: pointer;
+      font-family: var(--body); font-size: 13px; font-weight: 500; transition: all .15s;
+    }
+    .area-chip:hover { border-color: var(--muted); color: var(--text); }
+    .area-chip.active { background: rgba(255,107,53,0.12); border-color: var(--ember); color: var(--ember); }
+
+    /* form rows */
     .form-row { margin-bottom: 18px; }
     .form-row label {
       display: block; font-family: var(--mono); font-size: 10px;
       color: var(--muted); margin-bottom: 7px; letter-spacing: 1px; text-transform: uppercase;
     }
-    .form-row input,
-    .form-row select,
-    .form-row textarea {
-      width: 100%; background: var(--surface); border: 1px solid var(--line);
+    .form-row input, .form-row textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--line);
       color: var(--text); padding: 11px 14px; border-radius: 7px;
-      font-size: 14px; font-family: var(--body); transition: border-color .15s;
+      font-size: 14px; font-family: var(--body); transition: border-color .15s; box-sizing: border-box;
     }
-    .form-row input:focus,
-    .form-row select:focus,
-    .form-row textarea:focus { outline: none; border-color: var(--ember); }
-    .form-row textarea { height: 100px; resize: vertical; }
+    .form-row input::placeholder, .form-row textarea::placeholder { color: #5d6470; }
+    .form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--ember); }
+    .form-row textarea { height: 120px; resize: vertical; }
+    .form-error { color: #FF8A6B; font-size: 13px; margin-bottom: 14px; display: none; }
+    .form-error.show { display: block; }
     .form-submit {
       width: 100%; background: var(--ember); color: #1A0A03;
       border: none; padding: 14px; border-radius: 7px;
@@ -236,6 +275,20 @@
       transition: opacity .15s;
     }
     .form-submit:hover { opacity: .9; }
+    .form-note { font-size: 11.5px; color: #5d6470; margin: 14px 0 0; line-height: 1.5; text-align: center; }
+
+    /* success state */
+    .intake-success { display: none; text-align: center; padding: 18px 6px 8px; }
+    .success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,107,53,0.12); border: 1px solid var(--ember);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px;
+    }
+    .success-icon i { color: var(--ember); font-size: 26px; }
+    .intake-success h3 { font-family: var(--disp); font-weight: 700; font-size: 24px; letter-spacing: -0.4px; margin: 0 0 10px; }
+    .intake-success p { color: var(--muted); font-size: 14.5px; line-height: 1.7; margin: 0 auto 26px; max-width: 340px; }
+    .intake-success .btn-ghost { font-size: 13px; padding: 12px 24px; display: inline-block; }
 
     /* ── FOOTER ── */
     footer {
@@ -257,20 +310,19 @@
     }
 
     /* ── MOBILE ── */
+    @media (max-width: 860px) {
+      .disc-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid, .intake-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
     @media (max-width: 720px) {
-      .hero h1 { font-size: 38px; letter-spacing: -1px; }
+      .hero h1 { font-size: 40px; letter-spacing: -1px; }
       .hero-sub { font-size: 16px; }
-      .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .stat-strip { gap: 0; }
-      .stat { padding-right: 24px; margin-right: 24px; }
+      .disc-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 28px; gap: 16px; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 20px 28px; gap: 16px; z-index: 98; }
       .nav-toggle { display: block; }
-      .case { padding: 28px; }
-      .case-metrics { gap: 28px; }
       .section { padding: 60px 20px; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -280,132 +332,137 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">
+  <a href="#top" class="nav-brand">
     <svg class="torch-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 2 L20 21 L4 21 Z" stroke="#FF6B35" stroke-width="1.2" fill="none"/>
       <path d="M12 7 C13.5 9 13.8 11 12.5 13 C14 12.5 14.5 10.5 14 9 C15.2 10.8 15 13.5 13 15 C11 16.5 9 15 9.2 12.5 C9.3 11 10.5 9.5 12 7 Z" fill="#FF6B35"/>
     </svg>
     <div>
-      <div class="nav-name">ADVON & TORCH</div>
-      <span class="nav-tag">SDVOSB · VETERAN OWNED</span>
+      <div class="nav-name">ADVON &amp; TORCH</div>
+      <span class="nav-tag">BATTLE TESTED · 100+ YRS SERVICE</span>
     </div>
   </a>
   <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <i class="ti ti-menu-2"></i>
   </button>
   <div class="nav-links">
-    <a href="#caps">Capabilities</a>
-    <a href="#work">Work</a>
+    <a href="#areas">What we solve</a>
+    <a href="#why">Why us</a>
     <a href="packages.html">Packages</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="nav-cta">Request briefing</a>
+    <a href="#intake" class="nav-cta">Describe your problem</a>
   </div>
 </nav>
 
+<span id="top"></span>
 <div class="site">
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner">
-      <div class="eyebrow">Service-Disabled Veteran-Owned Small Business</div>
-      <h1>Secure infrastructure<br>for <span class="grad">mission-critical</span><br>healthcare and federal programs.</h1>
-      <p class="hero-sub">Advon & Torch designs and deploys HIPAA-compliant cloud systems, cybersecurity, and program management — engineered with the discipline of those who've served.</p>
+      <div class="eyebrow">National Guard-led consulting · Government · Finance · IT · Cyber</div>
+      <h1>Bring us the problem<br>you <span class="grad">can't crack</span><br>on your own.</h1>
+      <p class="hero-sub">Advon &amp; Torch is a National Guard-led consulting firm for growing businesses and federal programs. Tell us what's stuck — in government, financial operations, IT, or cybersecurity — and we'll bring the discipline to solve it.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Request a briefing</a>
-        <a href="#caps" class="btn-ghost">See capabilities</a>
+        <a href="#intake" class="btn-primary">Describe your problem</a>
+        <a href="packages.html" class="btn-ghost">Explore packages</a>
       </div>
-      <div class="stat-strip">
-        <div class="stat"><div class="stat-val">72–100</div><div class="stat-lbl">CHC sites</div></div>
-        <div class="stat"><div class="stat-val">18 mo</div><div class="stat-lbl">Program horizon</div></div>
-        <div class="stat"><div class="stat-val">Zero-Trust</div><div class="stat-lbl">HIPAA aligned</div></div>
-        <div class="stat"><div class="stat-val">VA-Verified</div><div class="stat-lbl">SDVOSB status</div></div>
+      <div class="pill-strip">
+        <span class="pill">100+ YRS COMBINED SERVICE</span>
+        <span class="pill">NATIONAL GUARD VETERANS</span>
+        <span class="pill">1 BUSINESS-DAY RESPONSE</span>
+        <span class="pill">ALEXANDRIA, VA · DMV</span>
       </div>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- CAPABILITIES -->
-  <section class="section" id="caps">
+  <!-- WHAT WE SOLVE -->
+  <section class="section" id="areas">
     <div class="section-head">
-      <div class="eyebrow">Capabilities</div>
-      <h2>Four disciplines, one accountable team.</h2>
-      <p>End-to-end delivery — architecture, deployment, and the compliance documentation that proves it.</p>
+      <div class="eyebrow">What we solve</div>
+      <h2>Four disciplines. One accountable team.</h2>
+      <p>If your problem lives in any of these, it's a conversation worth starting. Here's the kind of thing clients bring us.</p>
     </div>
-    <div class="caps">
-      <div class="cap">
-        <div class="cap-icon"><i class="ti ti-cloud-lock" aria-hidden="true"></i></div>
-        <h3>Cloud & M365</h3>
-        <p>Zero-trust Microsoft 365 and Azure architecture — Entra ID, Intune, Purview, Defender — built for regulated environments.</p>
+    <div class="disc-grid">
+
+      <div class="disc">
+        <div class="disc-icon"><i class="ti ti-building-bank" aria-hidden="true"></i></div>
+        <h3>Government &amp; Federal</h3>
+        <p>Contracts, compliance, and program delivery for federal and public-sector work.</p>
+        <div class="disc-quotes">
+          <div class="disc-q"><span class="disc-q-mark">›</span>"We need a trusted sub for a federal bid."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"Our program is slipping past its milestones."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"FAR/DFAR requirements are slowing us down."</div>
+        </div>
       </div>
-      <div class="cap">
-        <div class="cap-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
-        <h3>Cyber & Compliance</h3>
-        <p>HIPAA, NIST, CMMC, and FedRAMP alignment. Policy development, DLP design, risk assessment, and audit readiness.</p>
+
+      <div class="disc">
+        <div class="disc-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+        <h3>Financial Operations</h3>
+        <p>Tightening the numbers behind your operations — from budgeting to audit readiness.</p>
+        <div class="disc-quotes">
+          <div class="disc-q"><span class="disc-q-mark">›</span>"Our books won't survive an audit."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"We can't forecast cash across programs."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"Manual finance work is eating the team."</div>
+        </div>
       </div>
-      <div class="cap">
-        <div class="cap-icon"><i class="ti ti-chart-gantt" aria-hidden="true"></i></div>
-        <h3>Program Management</h3>
-        <p>Full-lifecycle PM&Ops — phased deployment, site survey coordination, reporting, and stakeholder alignment.</p>
+
+      <div class="disc">
+        <div class="disc-icon"><i class="ti ti-cloud-lock" aria-hidden="true"></i></div>
+        <h3>IT &amp; Infrastructure</h3>
+        <p>Cloud, identity, and the systems your team depends on every day.</p>
+        <div class="disc-quotes">
+          <div class="disc-q"><span class="disc-q-mark">›</span>"Our cloud migration stalled."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"M365 permissions are a tangled mess."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"Downtime keeps hurting the business."</div>
+        </div>
       </div>
-      <div class="cap">
-        <div class="cap-icon"><i class="ti ti-robot" aria-hidden="true"></i></div>
-        <h3>AI Automation</h3>
-        <p>Agentic workflows and Power Platform integration that streamline capture, BD, and operational processes.</p>
+
+      <div class="disc">
+        <div class="disc-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
+        <h3>Cybersecurity &amp; Compliance</h3>
+        <p>Protecting your data — and proving it to auditors and customers.</p>
+        <div class="disc-quotes">
+          <div class="disc-q"><span class="disc-q-mark">›</span>"We failed a security assessment."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"We need HIPAA or CMMC compliance."</div>
+          <div class="disc-q"><span class="disc-q-mark">›</span>"We don't know where we're exposed."</div>
+        </div>
       </div>
+
     </div>
+    <p class="disc-note">Not sure which bucket it falls in? <a href="#intake">Just describe it</a> — the messy ones are usually the most interesting.</p>
   </section>
 
   <hr class="divider" />
 
-  <!-- CASE STUDY -->
-  <section class="section" id="work">
-    <div class="section-head">
-      <div class="eyebrow">Featured engagement</div>
-      <h2>CHCRC EMR Database Initiative</h2>
-    </div>
-    <div class="case">
-      <div class="tag">Case study · LOA CHCRC-26-001</div>
-      <h3>Nationwide HIPAA-compliant EMR infrastructure for community health.</h3>
-      <p>A secure, Azure-hosted EMR ingestion database connecting 72–100 Community Health Centers nationwide — enabling closed-loop, compliant clinical data sharing in support of federally funded research under the Community Health Clinical Research Corporation.</p>
-      <div class="case-metrics">
-        <div><div class="cm-val e">$2.57M</div><div class="cm-lbl">Program value</div></div>
-        <div><div class="cm-val">18 mo</div><div class="cm-lbl">Performance period</div></div>
-        <div><div class="cm-val">5</div><div class="cm-lbl">Deployment phases</div></div>
-        <div><div class="cm-val">100%</div><div class="cm-lbl">HIPAA aligned</div></div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PROCESS -->
+  <!-- HOW WE ENGAGE -->
   <section class="section">
     <div class="section-head">
-      <div class="eyebrow">How we work</div>
-      <h2>A disciplined engagement model.</h2>
+      <div class="eyebrow">How we engage</div>
+      <h2>From a stuck problem to a solved one.</h2>
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step-num">01 / Discover</div>
-        <h4>Discovery & scoping</h4>
-        <p>Site surveys, stakeholder alignment, risk assessment, LOA and SLA structuring.</p>
+        <div class="step-num">01 / Listen</div>
+        <h4>Understand the problem</h4>
+        <p>A short call to learn the constraints, the stakes, and what "solved" actually looks like for you.</p>
       </div>
       <div class="step">
-        <div class="step-num">02 / Design</div>
-        <h4>Architecture design</h4>
-        <p>Zero-trust cloud architecture, tenant configuration, and compliance framework development.</p>
+        <div class="step-num">02 / Scope</div>
+        <h4>Put a plan on paper</h4>
+        <p>A clear proposal: what we'll do, what it costs, and how we'll prove it worked.</p>
       </div>
       <div class="step">
-        <div class="step-num">03 / Deploy</div>
-        <h4>Phased deployment</h4>
-        <p>Milestone-driven rollout across parallel engineering, PM, and compliance tracks.</p>
+        <div class="step-num">03 / Execute</div>
+        <h4>Veteran-led delivery</h4>
+        <p>The right mix of advisory, engineering, and program management — accountable end to end.</p>
       </div>
       <div class="step">
-        <div class="step-num">04 / Validate</div>
-        <h4>Validation & audit</h4>
-        <p>HIPAA control verification, penetration testing, lessons learned, and closeout.</p>
+        <div class="step-num">04 / Sustain</div>
+        <h4>Stay on the line</h4>
+        <p>Ongoing support and iteration through the Lifeline — and the next problem when you're ready.</p>
       </div>
     </div>
   </section>
@@ -413,47 +470,43 @@
   <hr class="divider" />
 
   <!-- WHY A&T -->
-  <section class="section" id="about">
+  <section class="section" id="why">
     <div class="why-grid">
       <div>
         <div class="section-head" style="margin-bottom: 36px;">
-          <div class="eyebrow">Why Advon & Torch</div>
-          <h2>Built different.</h2>
+          <div class="eyebrow">Why Advon &amp; Torch</div>
+          <h2>The discipline of those who've served.</h2>
         </div>
         <div class="why-list">
           <div class="why-item">
-            <h4><i class="ti ti-medal" aria-hidden="true"></i>Veteran leadership</h4>
-            <p>Signal Officer discipline and a mission-first standard of execution at every layer of delivery.</p>
+            <h4><i class="ti ti-medal" aria-hidden="true"></i>National Guard-led, mission-first</h4>
+            <p>Over 100 combined years of National Guard and military service behind every engagement. Accountability and integrity at every layer of delivery — the discipline that only comes from those who've served.</p>
           </div>
           <div class="why-item">
-            <h4><i class="ti ti-building-bank" aria-hidden="true"></i>Federal fluency</h4>
-            <p>SDVOSB-certified and experienced across FAR/DFAR environments, proposals, and LOA structuring.</p>
+            <h4><i class="ti ti-cpu" aria-hidden="true"></i>Founder pedigree that's earned</h4>
+            <p>National Guard officers with Booz Allen pedigree and Signal Officer discipline — master's-level cyber analytics embedded in how we run programs, not bolted on after.</p>
           </div>
           <div class="why-item">
-            <h4><i class="ti ti-cpu" aria-hidden="true"></i>Cyber-native</h4>
-            <p>Booz Allen pedigree with master's-level cyber analytics and ML embedded in our program management.</p>
-          </div>
-          <div class="why-item">
-            <h4><i class="ti ti-heartbeat" aria-hidden="true"></i>Healthcare IT depth</h4>
-            <p>HIPAA, HITECH, and PHI governance applied to real, active federal healthcare programs.</p>
+            <h4><i class="ti ti-target-arrow" aria-hidden="true"></i>Built for both ends of the market</h4>
+            <p>Fluent with a 3-person small business and a federal program office alike — same standard of execution, scaled to the stakes.</p>
           </div>
         </div>
       </div>
       <div>
         <div class="cred">
           <div class="cred-badges">
-            <span class="cred-badge">SDVOSB</span>
-            <span class="cred-badge">Veteran Owned</span>
+            <span class="cred-badge">National Guard</span>
+            <span class="cred-badge">100+ Yrs Service</span>
           </div>
-          <h3>VA-verified Service-Disabled Veteran-Owned Small Business.</h3>
-          <p>Eligible for set-aside federal contracts. We bring the operational discipline, integrity, and commitment to mission that only comes from those who have served.</p>
+          <h3>A partner that takes the problem as seriously as you do.</h3>
+          <p>We bring the operational discipline, integrity, and commitment to mission that only comes from those who have served — and we'd rather earn the next engagement than chase the first invoice.</p>
           <div class="partners">
-            <div class="partners-label">Technology stack</div>
+            <div class="partners-label">Practice areas</div>
             <div class="partner-chips">
-              <span class="chip">Microsoft Azure</span>
-              <span class="chip">M365 E5</span>
-              <span class="chip">Entra ID</span>
-              <span class="chip">Power Platform</span>
+              <span class="chip">Government</span>
+              <span class="chip">Financial Ops</span>
+              <span class="chip">IT</span>
+              <span class="chip">Cybersecurity</span>
             </div>
           </div>
         </div>
@@ -467,72 +520,103 @@
   <section class="section" id="packages">
     <div class="section-head">
       <div class="eyebrow">Service packages</div>
-      <h2>Transparent packages for growing teams.</h2>
-      <p>A three-part model for small-business teams of ~3–75 users: a fixed-price starter bundle, per-user Lifeline managed support, and à la carte build projects.</p>
+      <h2>Once we've scoped it, here's how it's priced.</h2>
+      <p>A fixed-price starter bundle to get launched, then per-user Lifeline support that scales as you grow.</p>
     </div>
-    <div class="caps" style="margin-bottom: 28px;">
-      <div class="cap">
+    <div class="pkg-mini">
+      <div class="pkg-mini-cell">
         <div class="cap-icon"><i class="ti ti-rocket" aria-hidden="true"></i></div>
         <h3>Ignite · $3,500</h3>
-        <p>Secure onboarding for up to 10 users and a professional 5-page website. Transitions to the Secure Lifeline.</p>
+        <p>Secure onboarding for up to 10 users and a professional 5-page site. Transitions to Secure.</p>
       </div>
-      <div class="cap">
+      <div class="pkg-mini-cell">
         <div class="cap-icon"><i class="ti ti-flame" aria-hidden="true"></i></div>
         <h3>Build · $9,500</h3>
         <p>Full managed setup, a custom CRM-connected site, and your first automation. Transitions to Secure+.</p>
       </div>
-      <div class="cap">
+      <div class="pkg-mini-cell">
         <div class="cap-icon"><i class="ti ti-rotate" aria-hidden="true"></i></div>
         <h3>Transform · $24,000</h3>
         <p>Advanced setup, a web app or AI builds, and a compliance-ready posture. Transitions to Managed AI.</p>
       </div>
     </div>
-    <a href="packages.html" class="btn-primary">Explore packages & estimator</a>
+    <a href="packages.html" class="btn-primary">Explore packages &amp; estimator</a>
   </section>
 
   <hr class="divider" />
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-head">
-      <div class="eyebrow">Get in touch</div>
-      <h2>Start the conversation.</h2>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <p class="ci-lead">Exploring a federal partnership, a compliance assessment, or how A&T can support your program? Reach out directly — we respond within one business day.</p>
-        <div class="ci-item">
-          <i class="ti ti-mail" aria-hidden="true"></i>
-          <div><div class="ci-label">Email</div><div class="ci-val">contact@advontorchinc.com</div></div>
-        </div>
-        <div class="ci-item">
-          <i class="ti ti-world" aria-hidden="true"></i>
-          <div><div class="ci-label">Web</div><div class="ci-val">www.advontorchinc.com</div></div>
-        </div>
-        <div class="ci-item">
-          <i class="ti ti-map-pin" aria-hidden="true"></i>
-          <div><div class="ci-label">Location</div><div class="ci-val">Alexandria, VA · DMV region</div></div>
-        </div>
-        <div class="ci-item">
-          <i class="ti ti-certificate" aria-hidden="true"></i>
-          <div><div class="ci-label">NAICS codes</div><div class="ci-val">541512 · 541513 · 541690</div></div>
-        </div>
+  <!-- INTAKE -->
+  <section class="section" id="intake" style="position:relative;overflow:hidden;">
+    <div class="intake-glow"></div>
+    <div style="position:relative;">
+      <div class="section-head">
+        <div class="eyebrow">Start the conversation</div>
+        <h2>Tell us what you're up against.</h2>
       </div>
-      <div>
-        <div class="form-row"><label>Name</label><input type="text" placeholder="Your full name" /></div>
-        <div class="form-row"><label>Organization</label><input type="text" placeholder="Agency or company" /></div>
-        <div class="form-row">
-          <label>Area of interest</label>
-          <select>
-            <option>Cloud & M365 infrastructure</option>
-            <option>Cybersecurity & HIPAA compliance</option>
-            <option>Federal program management</option>
-            <option>AI & workflow automation</option>
-            <option>SDVOSB set-aside contracting</option>
-          </select>
+      <div class="intake-grid">
+        <div>
+          <p class="ci-lead">No polished RFP required. A few sentences about the problem is enough to start — we'll read it and respond within one business day.</p>
+          <div class="ci-item">
+            <i class="ti ti-mail" aria-hidden="true"></i>
+            <div>
+              <div class="ci-label">Prefer email?</div>
+              <div class="ci-val"><a href="mailto:contact@advontorch.com">contact@advontorch.com</a></div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <i class="ti ti-calendar-event" aria-hidden="true"></i>
+            <div>
+              <div class="ci-label">Rather talk?</div>
+              <div class="ci-val"><a href="mailto:contact@advontorch.com?subject=Booking%20a%20briefing%20call">Book a 20-minute briefing call</a></div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <i class="ti ti-map-pin" aria-hidden="true"></i>
+            <div>
+              <div class="ci-label">Based in</div>
+              <div class="ci-val">Alexandria, VA · serving the DMV &amp; nationwide</div>
+            </div>
+          </div>
         </div>
-        <div class="form-row"><label>Message</label><textarea placeholder="Briefly describe your need or program..."></textarea></div>
-        <button class="form-submit">Send request</button>
+        <div>
+          <div class="intake-card">
+            <!-- FORM STATE -->
+            <div id="intakeFormWrap">
+              <div class="chips-label">Area of focus <span>(optional)</span></div>
+              <div class="chips-row" id="chipRow">
+                <button type="button" class="area-chip" data-chip="gov">Government</button>
+                <button type="button" class="area-chip" data-chip="fin">Financial Ops</button>
+                <button type="button" class="area-chip" data-chip="it">IT</button>
+                <button type="button" class="area-chip" data-chip="cyber">Cybersecurity</button>
+                <button type="button" class="area-chip" data-chip="other">Something else</button>
+              </div>
+              <form id="intakeForm" novalidate>
+                <div class="form-row">
+                  <label for="intakeName">Name</label>
+                  <input id="intakeName" type="text" placeholder="Your full name" />
+                </div>
+                <div class="form-row">
+                  <label for="intakeEmail">Email</label>
+                  <input id="intakeEmail" type="email" placeholder="you@organization.com" />
+                </div>
+                <div class="form-row">
+                  <label for="intakeMsg">The problem</label>
+                  <textarea id="intakeMsg" placeholder="What's stuck, what you've tried, and what 'solved' looks like..."></textarea>
+                </div>
+                <div class="form-error" id="formError"></div>
+                <button type="submit" class="form-submit">Send your problem</button>
+                <p class="form-note">We respond within one business day. Nothing you share is shared on.</p>
+              </form>
+            </div>
+            <!-- SUCCESS STATE -->
+            <div class="intake-success" id="intakeSuccess">
+              <div class="success-icon"><i class="ti ti-check" aria-hidden="true"></i></div>
+              <h3>Got it<span id="successName"></span>.</h3>
+              <p>Your problem is in our hands. Expect a thoughtful reply within one business day — usually from a person, not a form.</p>
+              <a href="mailto:contact@advontorch.com" class="btn-ghost">Add something? Email us directly</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -541,14 +625,53 @@
 
 <footer>
   <div>
-    <div class="footer-brand">ADVON & TORCH INC</div>
+    <div class="footer-brand">ADVON &amp; TORCH INC</div>
     <div class="footer-meta">© 2026 · Lighting the path for secure and efficient operations.</div>
   </div>
   <div class="footer-badges">
-    <span class="fbadge">SDVOSB</span>
-    <span class="fbadge">Veteran Owned</span>
+    <span class="fbadge">National Guard</span>
   </div>
 </footer>
+
+<script>
+  // ── area chips ──
+  document.querySelectorAll('.area-chip').forEach(btn => {
+    btn.addEventListener('click', () => btn.classList.toggle('active'));
+  });
+
+  // ── intake form ──
+  const form = document.getElementById('intakeForm');
+  const errEl = document.getElementById('formError');
+
+  function showError(msg) {
+    errEl.textContent = msg;
+    errEl.classList.add('show');
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    errEl.classList.remove('show');
+
+    const name  = document.getElementById('intakeName').value.trim();
+    const email = document.getElementById('intakeEmail').value.trim();
+    const msg   = document.getElementById('intakeMsg').value.trim();
+
+    if (!name || !email || !msg) {
+      showError('Please add your name, email, and a short description of the problem.');
+      return;
+    }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      showError("That email address looks off — mind double-checking it?");
+      return;
+    }
+
+    // success
+    const first = name.split(' ')[0];
+    document.getElementById('successName').textContent = first ? ', ' + first : '';
+    document.getElementById('intakeFormWrap').style.display = 'none';
+    document.getElementById('intakeSuccess').style.display  = 'block';
+  });
+</script>
 
 </body>
 </html>
